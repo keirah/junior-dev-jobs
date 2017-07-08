@@ -1,4 +1,9 @@
+# let's tell travis what version we're working in
+
 language: node_js
+node_js:
+  - "node" # will use the most up-to-date
+#Cache tells travis to keep some files between builds
 cache:
   directories:
     - "node_modules"
