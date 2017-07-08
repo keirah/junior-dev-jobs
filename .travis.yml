@@ -7,6 +7,11 @@ node_js:
 cache:
   directories:
     - "node_modules"
+install: true
 script:
-  - ./build/build.sh
-  - ./build/test.sh
+  - ./build/linux/build.sh
+  - ./build/linux/test.sh
+deploy:
+  provider: "heroku"
+    api_key:
+      secure: "iXtSm5E4iCXmY5pOmRF2f76GPkgKBdL5ynId2FAxfHNvyOLvyryPpHDanBhGQ1IuuGvP09yxWZHheyr3icFCb92vRFXgKcPmh2BDhGHNVTHEmSgEdrpfU3aOe3bhmDKfsG0QVDmadheAY7cH/dTU04uKrzJQ485d1CkorSfZsApzEFgIJR7XkYzZU1CXcj6ViWPUszsHIajkpjuKg7/J7x+JpLWzQMYleszqWDc5B4Ucay3/MQct9c8hSf9VdXSGCLyY3STN6G5H8xVNSM6qrzRYGoUa75dnLYy15qV+IDe7w5ozO64kkB7yjbsixXkKeHUkKSMcuhxa6HzwgVG/6aA8SZusf/PGqm9VeJPxI4pwASVJbDMizH5uZpkXPDPsG/CHyOvLu+Cuc5k5ioUkn/GPsUqFF03Pc/s7FfITWCwhccUO8BB5D0xRqA5b6FE0hnJKENkQLE5cPcy+0DDdnPiMkRRBQVzNo/ylAlaRsNUcLp4a00afn8CB11GrZA5UnuBo7GCHp5MxqeTC+h9ePqpyiJnrnc7+UVIg514iOaRyjsgOSwgQ7Tk95RmchXS+4WjUF9eUZOWhX5aj5Ws8V5GvqUVzNxMOq5uo/4ihGoOF8oz0WXqWeSBwwe3Kwd7mRem4cJ8tXXbYO2wy6zvM3xTQIpZ2xAZ1BtIa0z2IFaY="

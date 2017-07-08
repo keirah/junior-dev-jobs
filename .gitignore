@@ -1,4 +1,4 @@
 /node_modules
 package-lock.json
 public/app.bundle.*
-.vscode/settings.json
+/data
