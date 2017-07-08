@@ -10,9 +10,12 @@ const path = require('path');
 let app = express();
 let db;
 
-MongoClient.connect('mongodb://localhost/juniordevjobsdb', function(err, dbConnection) {
+let httpListenPort = process.env.PORT || 3000;
+let mongoDbUrl = process.env.MONGO_URL || 'mongodb://localhost/juniordevjobsdb';
+
+MongoClient.connect(mongoDbUrl, function(err, dbConnection) {
   db = dbConnection;
-  let server = app.listen(process.env.PORT || 3000, function() {
+  let server = app.listen(httpListenPort, function() {
 	  let port = server.address().port;
 	  console.log("Started server on port", port);
   });
